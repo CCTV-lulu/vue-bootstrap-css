@@ -3,19 +3,71 @@
     <h3>css展示卡片</h3>
     <div class="row ">
       <div class="block col-md-3 ">
-          <h5>只有颜色不同的按钮</h5>
+        <div class="title">
+          <span>只有颜色不同的按钮</span>
+        </div>
+        <div class="content">
 
+        </div>
       </div>
       <div class="block col-md-3 ">
-        <h5>透明边框</h5>
+        <div class="title">
+          <span>透明边框</span>
+        </div>
+        <div class="content">
+
+        </div>
       </div>
       <div class="block col-md-3 ">
-        <h5>多层边框</h5>
+        <div class="title">
+          <span>多层边框</span>
+        </div>
+        <div class="content">
+
+        </div>
       </div>
       <div class="block col-md-3 ">
-        <h5>两层边框</h5>
+        <div class="title">
+          <span>两层边框</span>
+        </div>
+        <div class="content">
+
+        </div>
+      </div>
+      <div class="block col-md-3 ">
+        <div class="title">
+          <span>两层边框</span>
+        </div>
+        <div class="content">
+
+        </div>
+      </div>
+      <div class="block col-md-3 ">
+        <div class="title">
+          <span>两层边框</span>
+        </div>
+        <div class="content">
+
+        </div>
+      </div>
+      <div class="block col-md-3 ">
+        <div class="title">
+          <span>两层边框</span>
+        </div>
+        <div class="content">
+
+        </div>
+      </div>
+      <div class="block col-md-3 ">
+        <div class="title">
+          <span>两层边框</span>
+        </div>
+        <div class="content">
+
+        </div>
       </div>
     </div>
+
   </div>
 </template>
 
@@ -32,21 +84,43 @@ export default {
 <style scoped>
 
   .app-container{
-    background: no-repeat url("../assets/background.jpg");
-    background-size: 100%;
+    background: url("../assets/background.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     text-align: center;
     height: 100%;
   }
+  .title{
+    height: 15%;
+    width: 93%;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(175, 199, 217, 0.5);
+    /*background-color: rgba(158,250,116,0.9);*/
+    /*color: #3aff73;*/
+  }
+  .content{
+    height: 73%;
+    width: 93%;
+    margin: 0 auto;
+    background-color: rgba(175, 199, 217, 0.5);
+    /*background-color: rgba(158,250,116,0.9);*/
+  }
   .row{
-    height: 30%;
+    height: 40%;
   }
   .block{
-    /*border: 10px solid rgba(0,0,0,0);*/
-    padding: 10px;
+    /*padding: 10px;*/
+    margin-bottom: 10px;
+    box-shadow: 0 0 0 10px rgba(0,0,0,0),
+                3px 5px 2px 2px rgba(176, 195, 192, 0.1);
     height: 100%;
-    background-color: #9efa74;
+    background-color: rgba(158,250,116,0.7);
     background-clip: content-box;
-
   }
 
 </style>

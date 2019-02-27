@@ -1,8 +1,8 @@
 const webpack = require('webpack')
-const path = require('path')
-function resolve(dir) {
-    return path.join(__dirname, '..', dir)
-}
+// const path = require('path')
+// function resolve(dir) {
+//     return path.join(__dirname, '..', dir)
+// }
 module.exports = {
     // 项目部署的基础路径
     // 我们默认假设你的应用将会部署在域名的根部，
@@ -93,12 +93,12 @@ module.exports = {
             // `app` 是一个 express 实例
         }
     },
-    resolve: {
-        extensions: ['.js', '.vue', '.json'],
-        alias: {
-            '@': resolve('src')
-        }
-    },
+    // resolve: {
+    //     extensions: ['.js', '.vue', '.json'],
+    //     alias: {
+    //         '@': resolve('src')
+    //     }
+    // },
 
     // 三方插件的选项
     pluginOptions: {
