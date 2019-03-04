@@ -36,34 +36,28 @@
       </div>
       <div class="block col-md-3 ">
         <div class="title">
-          <span>两层边框</span>
+          <span>内侧圆角</span>
         </div>
         <div class="content">
-
+            <div class="something-meaningful">
+                <div>内侧圆角的div块1</div>
+            </div>
+            <div class="second-meaningful">
+              <div>内侧圆角的div块2</div>
+            </div>
         </div>
       </div>
       <div class="block col-md-3 ">
         <div class="title">
-          <span>两层边框</span>
+          <span>条纹背景</span>
         </div>
         <div class="content">
-
-        </div>
-      </div>
-      <div class="block col-md-3 ">
-        <div class="title">
-          <span>两层边框</span>
-        </div>
-        <div class="content">
-
-        </div>
-      </div>
-      <div class="block col-md-3 ">
-        <div class="title">
-          <span>两层边框</span>
-        </div>
-        <div class="content">
-
+          <div class="transverse-stripe">
+            横向条纹
+          </div>
+          <div class="portrait-stripe">
+            纵向条纹
+          </div>
         </div>
       </div>
     </div>
@@ -84,11 +78,12 @@ export default {
 <style scoped>
 
   .app-container{
-    background: url("../assets/background.jpg") no-repeat center center fixed;
+    background: url("../assets/background.jpg") no-repeat center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    overflow: scroll;
     text-align: center;
     height: 100%;
   }
@@ -121,6 +116,38 @@ export default {
     height: 100%;
     background-color: rgba(158,250,116,0.7);
     background-clip: content-box;
+  }
+  .something-meaningful{
+    margin: 10px;
+    background: #655;
+    padding: .8em;
+  }
+  .something-meaningful > div{
+    background: tan;
+    border-radius: .8em;
+    padding: 1em;
+  }
+  .second-meaningful{
+    margin: 10px;
+    background: tan;
+    border-radius: .8em;
+    padding: 1em;
+    /*非常聪明的一种实现方式*/
+    /*对css的和模型理解的非常到位*/
+    box-shadow: 0 0 0 .3em #655;
+    outline: .3em solid #655;
+  }
+  .transverse-stripe{
+    height: 50%;
+    background: linear-gradient(#fb3 33.3%,#58a 0, #58a 66.6%, yellowgreen 0);
+    background-size: 100% 30px;
+  }
+  .portrait-stripe{
+    height: 50%;
+    /*background: linear-gradient(45deg, #fb3 33.3%,#58a 0, #58a 66.6%, yellowgreen 0);*/
+    /*background-size: 100% 30px;*/
+    background: linear-gradient(45deg,#fb3 25%, #58a 0, #58a 50%,#fb3 0, #fb3 75%, #58a 0);
+    background-size: 30px 30px;
   }
 
 </style>
